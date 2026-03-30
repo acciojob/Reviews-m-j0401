@@ -1,5 +1,6 @@
 
 import React, { useState } from "react";
+import "../styles/App.css"
 
 import reviews from "../data/reviewList"
 
@@ -31,8 +32,8 @@ const App=()=>{
     <button className="prev-btn" onClick={movenext}>Previous</button>
     <button className="next-btn" onClick={moveback}>Next</button>
     <button className="random-btn" onClick={randomMove}>surprise me</button>
-<div className="review"></div>
-   <Revw list={data}/>
+    
+    <Revw list={data}/>
     </div>
 
    
