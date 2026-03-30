@@ -29,8 +29,8 @@ const App=()=>{
 
     return <div className="review">
      <h1 id="review-heading">Our Reviews</h1>
-    <button className="prev-btn" onClick={movenext}>Previous</button>
-    <button className="next-btn" onClick={moveback}>Next</button>
+    <button className="next-btn" onClick={movenext}>Next</button>
+    <button className="prev-btn" onClick={moveback}>Previous</button>
     <button className="random-btn" onClick={randomMove}>surprise me</button>
     
     <Revw list={data}/>
