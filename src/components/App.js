@@ -1,2 +1,40 @@
-<p>Now I can render any React component on any DOM node I want using ReactDOM.render</p>
 
+import React, { useState } from "react";
+
+import reviews from "../data/reviewList"
+
+import Revw from "./Reviews"
+let ind=0
+const App=()=>{
+    
+    let [data,setData]=useState(reviews[ind]);
+   function movenext(){
+         if(ind<reviews.length-1)
+            ind+=1
+        setData(reviews[ind]);
+    }
+    function moveback(){
+        if(ind>0)
+        {
+            ind-=1
+            setData(reviews[ind]);
+        }
+    }
+    function randomMove()
+    {
+        let randomInd=parseInt(Math.random()*reviews.length);
+        setData(reviews[randomInd]);
+    }
+
+    return <div>
+     <h1 id="review-heading">Our Reviews</h1>
+    <button className="prev-btn" onClick={movenext}>Previous</button>
+    <button className="next-btn" onClick={moveback}>Next</button>
+    <button className="random-btn" onClick={randomMove}>surprise me</button>
+<div className="review"></div>
+   <Revw list={data}/>
+    </div>
+
+   
+}
+ export default App;
