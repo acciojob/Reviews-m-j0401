@@ -27,10 +27,10 @@ const App=()=>{
         setData(reviews[randomInd]);
     }
 
-    return <div className="review">
+    return <div className="review" id={`author-${ind+1}`}>
      <h1 id="review-heading">Our Reviews</h1>
-    <button className="next-btn"  id={`author-${ind+1}`}onClick={movenext}>Next</button>
-    <button className="prev-btn" id={`author-${ind+1}`} onClick={moveback}>Previous</button>
+    <button className="next-btn"  onClick={movenext}>Next</button>
+    <button className="prev-btn"  onClick={moveback}>Previous</button>
     <button className="random-btn" onClick={randomMove}>surprise me</button>
     
     <Revw list={data}/>
