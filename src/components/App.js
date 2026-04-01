@@ -10,10 +10,10 @@ const App=()=>{
     
     let [data,setData]=useState(reviews[ind]);
    function movenext(){
-       setIndex((prev) => (prev + 1) % reviews.length);
+       setData((prev) => (prev + 1) % reviews.length);
     }
     function moveback(){
-        setIndex((prev) => (prev - 1 + reviews.length) % reviews.length);
+        setData((prev) => (prev - 1 + reviews.length) % reviews.length);
     }
     function randomMove()
     {
