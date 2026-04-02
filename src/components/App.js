@@ -9,11 +9,27 @@ let ind=0
 const App=()=>{
     
     let [data,setData]=useState(reviews[ind]);
+    console.log(reviews.length)
    function movenext(){
-       setData((prev) => (prev + 1) % reviews.length);
+       if(ind<reviews.length-1)
+       {
+        ind+=1;
+       }
+       else
+       {
+        ind=0;
+       }
+       setData(reviews[ind]);
     }
     function moveback(){
-        setData((prev) => (prev - 1 + reviews.length) % reviews.length);
+        if(ind>0)
+        {
+           ind-=1;
+        }
+        else{
+            ind=reviews.length-1;
+        }
+        setData(reviews[ind]);
     }
     function randomMove()
     {
@@ -21,7 +37,7 @@ const App=()=>{
         setData(reviews[randomInd]);
     }
 
-    return <div className="review" id={`author-${ind+1}`}>
+    return <div className="review" id={`author-${ind}`}>
      <h1 id="review-heading">Our Reviews</h1>
     <button className="next-btn"  onClick={movenext}>Next</button>
     <button className="prev-btn"  onClick={moveback}>Previous</button>
