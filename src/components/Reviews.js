@@ -3,8 +3,8 @@ import React from "react";
 
 const Reviews=(props)=>{
  let {id,name,job,image,text}=props.list;
-    return <div id={id}  className="review">
-        {console.log("author-id",{id})}
+    return <div  className="review">
+        
         <p className="author">Author:{name}</p>
         <p className="job">Job:{job}</p>
         <img className="person-img" src={image} alt={name}></img>

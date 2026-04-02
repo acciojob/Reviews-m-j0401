@@ -34,7 +34,8 @@ const App=()=>{
     function randomMove()
     {
         let randomInd=parseInt(Math.random()*reviews.length);
-        setData(reviews[randomInd]);
+        ind=randomInd
+        setData(reviews[ind]);
     }
 
     return <div className="review">
