@@ -37,7 +37,7 @@ const App=()=>{
         setData(reviews[randomInd]);
     }
 
-    return <div className="review" id={`author-${ind}`}>
+    return <div className="review" id={`author-${ind+1}`}>
      <h1 id="review-heading">Our Reviews</h1>
     <button className="next-btn"  onClick={movenext}>Next</button>
     <button className="prev-btn"  onClick={moveback}>Previous</button>
